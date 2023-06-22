@@ -1,1 +1,1 @@
-# Database For University
+# Интерфейс для бд
