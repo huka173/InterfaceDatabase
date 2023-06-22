@@ -35,12 +35,12 @@
             this.teacherWithTitleTableAdapter = new Database.DataSet1TableAdapters.TeacherWithTitleTableAdapter();
             this.tableAdapterManager = new Database.DataSet1TableAdapters.TableAdapterManager();
             this.teacherWithTitleDataGridView = new System.Windows.Forms.DataGridView();
-            this.idTeacherTextBox = new System.Windows.Forms.TextBox();
             this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teacherTableAdapter = new Database.DataSet1TableAdapters.TeacherTableAdapter();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             idTeacherLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherWithTitleBindingSource)).BeginInit();
@@ -99,14 +99,6 @@
             idTeacherLabel.TabIndex = 3;
             idTeacherLabel.Text = "Id Учителя";
             // 
-            // idTeacherTextBox
-            // 
-            this.idTeacherTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teacherWithTitleBindingSource, "IdTeacher", true));
-            this.idTeacherTextBox.Location = new System.Drawing.Point(417, 6);
-            this.idTeacherTextBox.Name = "idTeacherTextBox";
-            this.idTeacherTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idTeacherTextBox.TabIndex = 4;
-            // 
             // teacherBindingSource
             // 
             this.teacherBindingSource.DataMember = "Teacher";
@@ -151,16 +143,28 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.teacherWithTitleBindingSource, "IdTeacher", true));
+            this.comboBox1.DataSource = this.teacherBindingSource;
+            this.comboBox1.DisplayMember = "LName";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(393, 6);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(114, 21);
+            this.comboBox1.TabIndex = 23;
+            this.comboBox1.ValueMember = "IdTeacher";
+            // 
             // TeacherWithTitle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(idTeacherLabel);
-            this.Controls.Add(this.idTeacherTextBox);
             this.Controls.Add(this.teacherWithTitleDataGridView);
             this.Name = "TeacherWithTitle";
             this.Text = "Учителя с должностью(выше ассистент)";
@@ -181,11 +185,11 @@
         private DataSet1TableAdapters.TeacherWithTitleTableAdapter teacherWithTitleTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView teacherWithTitleDataGridView;
-        private System.Windows.Forms.TextBox idTeacherTextBox;
         private DataSet1TableAdapters.TeacherTableAdapter teacherTableAdapter;
         private System.Windows.Forms.BindingSource teacherBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
