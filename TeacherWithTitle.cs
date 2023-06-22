@@ -1,5 +1,4 @@
-﻿using Database.DataSet1TableAdapters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,42 +10,39 @@ using System.Windows.Forms;
 
 namespace Database
 {
-    public partial class Teacher : Form
+    public partial class TeacherWithTitle : Form
     {
-        public Teacher()
+        public TeacherWithTitle()
         {
             InitializeComponent();
         }
 
-        private void teacherBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void teacherWithTitleBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.teacherBindingSource.EndEdit();
+            this.teacherWithTitleBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dataSet1);
 
         }
 
-        private void Teacher_Load(object sender, EventArgs e)
+        private void TeacherWithTitle_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet1.Teacher' table. You can move, or remove it, as needed.
             this.teacherTableAdapter.Fill(this.dataSet1.Teacher);
+            // TODO: This line of code loads data into the 'dataSet1.TeacherWithTitle' table. You can move, or remove it, as needed.
+            this.teacherWithTitleTableAdapter.Fill(this.dataSet1.TeacherWithTitle);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            teacherBindingSource.AddNew();
+            teacherWithTitleBindingSource.AddNew();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            teacherBindingSource.EndEdit();
-            teacherTableAdapter.Update(dataSet1);
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            teacherWithTitleBindingSource.EndEdit();
+            teacherWithTitleTableAdapter.Update(dataSet1);
         }
     }
 }

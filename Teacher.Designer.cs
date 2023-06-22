@@ -42,7 +42,18 @@
             this.teacherTableAdapter = new Database.DataSet1TableAdapters.TeacherTableAdapter();
             this.tableAdapterManager = new Database.DataSet1TableAdapters.TableAdapterManager();
             this.teacherDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lNameTextBox = new System.Windows.Forms.TextBox();
+            this.fNameTextBox = new System.Windows.Forms.TextBox();
+            this.sNameTextBox = new System.Windows.Forms.TextBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.teacherDisciplineTableAdapter = new Database.DataSet1TableAdapters.TeacherDisciplineTableAdapter();
+            this.academicDegreeTextBox = new System.Windows.Forms.TextBox();
+            this.academicTitleTextBox = new System.Windows.Forms.TextBox();
+            this.jobTitleTextBox = new System.Windows.Forms.TextBox();
+            this.sexTextBox = new System.Windows.Forms.TextBox();
+            this.fkIdTeacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,18 +62,6 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lNameTextBox = new System.Windows.Forms.TextBox();
-            this.fNameTextBox = new System.Windows.Forms.TextBox();
-            this.sNameTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.fkIdTeacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.teacherDisciplineTableAdapter = new Database.DataSet1TableAdapters.TeacherDisciplineTableAdapter();
-            this.academicDegreeTextBox = new System.Windows.Forms.TextBox();
-            this.academicTitleTextBox = new System.Windows.Forms.TextBox();
-            this.sexTextBox = new System.Windows.Forms.TextBox();
-            this.jobTitleTextBox = new System.Windows.Forms.TextBox();
             academicDegreeLabel = new System.Windows.Forms.Label();
             academicTitleLabel = new System.Windows.Forms.Label();
             jobTitleLabel = new System.Windows.Forms.Label();
@@ -183,7 +182,6 @@
             this.teacherDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.teacherDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.teacherDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
@@ -198,61 +196,6 @@
             this.teacherDataGridView.Name = "teacherDataGridView";
             this.teacherDataGridView.Size = new System.Drawing.Size(940, 202);
             this.teacherDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdTeacher";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdTeacher";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "AcademicDegree";
-            this.dataGridViewTextBoxColumn2.HeaderText = "AcademicDegree";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "AcademicTitle";
-            this.dataGridViewTextBoxColumn3.HeaderText = "AcademicTitle";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "JobTitle";
-            this.dataGridViewTextBoxColumn4.HeaderText = "JobTitle";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "LName";
-            this.dataGridViewTextBoxColumn5.HeaderText = "LName";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "FName";
-            this.dataGridViewTextBoxColumn6.HeaderText = "FName";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "SName";
-            this.dataGridViewTextBoxColumn7.HeaderText = "SName";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Phone";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Phone";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Sex";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Sex";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // lNameTextBox
             // 
@@ -310,11 +253,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // fkIdTeacherBindingSource
-            // 
-            this.fkIdTeacherBindingSource.DataMember = "fk_IdTeacher";
-            this.fkIdTeacherBindingSource.DataSource = this.teacherBindingSource;
-            // 
             // teacherDisciplineTableAdapter
             // 
             this.teacherDisciplineTableAdapter.ClearBeforeFill = true;
@@ -335,6 +273,14 @@
             this.academicTitleTextBox.Size = new System.Drawing.Size(131, 20);
             this.academicTitleTextBox.TabIndex = 25;
             // 
+            // jobTitleTextBox
+            // 
+            this.jobTitleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teacherBindingSource, "JobTitle", true));
+            this.jobTitleTextBox.Location = new System.Drawing.Point(113, 265);
+            this.jobTitleTextBox.Name = "jobTitleTextBox";
+            this.jobTitleTextBox.Size = new System.Drawing.Size(131, 20);
+            this.jobTitleTextBox.TabIndex = 27;
+            // 
             // sexTextBox
             // 
             this.sexTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teacherBindingSource, "Sex", true));
@@ -343,13 +289,58 @@
             this.sexTextBox.Size = new System.Drawing.Size(131, 20);
             this.sexTextBox.TabIndex = 37;
             // 
-            // jobTitleTextBox
+            // fkIdTeacherBindingSource
             // 
-            this.jobTitleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teacherBindingSource, "JobTitle", true));
-            this.jobTitleTextBox.Location = new System.Drawing.Point(113, 265);
-            this.jobTitleTextBox.Name = "jobTitleTextBox";
-            this.jobTitleTextBox.Size = new System.Drawing.Size(131, 20);
-            this.jobTitleTextBox.TabIndex = 27;
+            this.fkIdTeacherBindingSource.DataMember = "fk_IdTeacher";
+            this.fkIdTeacherBindingSource.DataSource = this.teacherBindingSource;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "AcademicDegree";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Ученая степень";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "AcademicTitle";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ученое звание";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "JobTitle";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Должность";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "LName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Фамилия";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "FName";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Имя";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "SName";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Отчество";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Phone";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Телефон";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Sex";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Пол";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // Teacher
             // 
@@ -395,15 +386,6 @@
         private DataSet1TableAdapters.TeacherTableAdapter teacherTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView teacherDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.TextBox lNameTextBox;
         private System.Windows.Forms.TextBox fNameTextBox;
         private System.Windows.Forms.TextBox sNameTextBox;
@@ -414,7 +396,15 @@
         private DataSet1TableAdapters.TeacherDisciplineTableAdapter teacherDisciplineTableAdapter;
         private System.Windows.Forms.TextBox academicDegreeTextBox;
         private System.Windows.Forms.TextBox academicTitleTextBox;
-        private System.Windows.Forms.TextBox sexTextBox;
         private System.Windows.Forms.TextBox jobTitleTextBox;
+        private System.Windows.Forms.TextBox sexTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }

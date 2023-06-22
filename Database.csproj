@@ -66,6 +66,18 @@
     <Compile Include="Teacher.Designer.cs">
       <DependentUpon>Teacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherDiscipline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherDiscipline.Designer.cs">
+      <DependentUpon>TeacherDiscipline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherWithTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherWithTitle.Designer.cs">
+      <DependentUpon>TeacherWithTitle.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Discipline.resx">
       <DependentUpon>Discipline.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +92,12 @@
     </Compile>
     <EmbeddedResource Include="Teacher.resx">
       <DependentUpon>Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherDiscipline.resx">
+      <DependentUpon>TeacherDiscipline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherWithTitle.resx">
+      <DependentUpon>TeacherWithTitle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
