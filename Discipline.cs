@@ -42,5 +42,24 @@ namespace Database
             disciplineBindingSource.EndEdit();
             disciplineTableAdapter.Update(dataSet1);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < disciplineDataGridView.Rows.Count; i++)
+            {
+                disciplineDataGridView.Rows[i].Selected = false;
+                for(int j = 0; j < disciplineDataGridView.ColumnCount; j++)
+                {
+                    if (disciplineDataGridView.Rows[i].Cells[j].Value != null)
+                    {
+                        if (disciplineDataGridView.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            disciplineDataGridView.Rows[i].Selected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

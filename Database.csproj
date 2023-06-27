@@ -58,8 +58,50 @@
     <Compile Include="Discipline.Designer.cs">
       <DependentUpon>Discipline.cs</DependentUpon>
     </Compile>
+    <Compile Include="GraduateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraduateStudent.Designer.cs">
+      <DependentUpon>GraduateStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecture.Designer.cs">
+      <DependentUpon>Lecture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Load.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Load.Designer.cs">
+      <DependentUpon>Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Semestr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Semestr.Designer.cs">
+      <DependentUpon>Semestr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stream.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stream.Designer.cs">
+      <DependentUpon>Stream.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +123,21 @@
     <EmbeddedResource Include="Discipline.resx">
       <DependentUpon>Discipline.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GraduateStudent.resx">
+      <DependentUpon>GraduateStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecture.resx">
+      <DependentUpon>Lecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Load.resx">
+      <DependentUpon>Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -90,6 +147,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Semestr.resx">
+      <DependentUpon>Semestr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stream.resx">
+      <DependentUpon>Stream.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher.resx">
       <DependentUpon>Teacher.cs</DependentUpon>
     </EmbeddedResource>

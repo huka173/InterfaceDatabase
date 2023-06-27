@@ -42,6 +42,14 @@
             this.teacherTableAdapter = new Database.DataSet1TableAdapters.TeacherTableAdapter();
             this.tableAdapterManager = new Database.DataSet1TableAdapters.TableAdapterManager();
             this.teacherDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNameTextBox = new System.Windows.Forms.TextBox();
             this.fNameTextBox = new System.Windows.Forms.TextBox();
             this.sNameTextBox = new System.Windows.Forms.TextBox();
@@ -54,14 +62,9 @@
             this.jobTitleTextBox = new System.Windows.Forms.TextBox();
             this.sexTextBox = new System.Windows.Forms.TextBox();
             this.fkIdTeacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             academicDegreeLabel = new System.Windows.Forms.Label();
             academicTitleLabel = new System.Windows.Forms.Label();
             jobTitleLabel = new System.Windows.Forms.Label();
@@ -144,9 +147,9 @@
             sexLabel.AutoSize = true;
             sexLabel.Location = new System.Drawing.Point(263, 293);
             sexLabel.Name = "sexLabel";
-            sexLabel.Size = new System.Drawing.Size(30, 13);
+            sexLabel.Size = new System.Drawing.Size(27, 13);
             sexLabel.TabIndex = 17;
-            sexLabel.Text = "Пол:";
+            sexLabel.Text = "Пол";
             // 
             // dataSet1
             // 
@@ -197,6 +200,54 @@
             this.teacherDataGridView.Size = new System.Drawing.Size(940, 202);
             this.teacherDataGridView.TabIndex = 1;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "AcademicDegree";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Ученая степень";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "AcademicTitle";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ученое звание";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "JobTitle";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Должность";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "LName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Фамилия";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "FName";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Имя";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "SName";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Отчество";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Phone";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Телефон";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Sex";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Пол";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
             // lNameTextBox
             // 
             this.lNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.teacherBindingSource, "LName", true));
@@ -231,11 +282,11 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(266, 325);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(229, 65);
+            this.button2.Size = new System.Drawing.Size(233, 65);
             this.button2.TabIndex = 20;
             this.button2.Text = "Сохранить";
             this.button2.UseVisualStyleBackColor = false;
@@ -243,7 +294,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(11, 325);
             this.button1.Name = "button1";
@@ -294,53 +345,33 @@
             this.fkIdTeacherBindingSource.DataMember = "fk_IdTeacher";
             this.fkIdTeacherBindingSource.DataSource = this.teacherBindingSource;
             // 
-            // dataGridViewTextBoxColumn2
+            // label1
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "AcademicDegree";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Ученая степень";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(510, 291);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Поиск";
             // 
-            // dataGridViewTextBoxColumn3
+            // textBox1
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "AcademicTitle";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ученое звание";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.textBox1.Location = new System.Drawing.Point(555, 288);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(267, 20);
+            this.textBox1.TabIndex = 39;
             // 
-            // dataGridViewTextBoxColumn4
+            // button3
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "JobTitle";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Должность";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "LName";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Фамилия";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "FName";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Имя";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "SName";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Отчество";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Phone";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Телефон";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Sex";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Пол";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(513, 325);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(309, 65);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "Результат";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Teacher
             // 
@@ -348,6 +379,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(940, 515);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.academicDegreeTextBox);
             this.Controls.Add(this.academicTitleTextBox);
             this.Controls.Add(this.jobTitleTextBox);
@@ -406,5 +440,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Database
 {
-    partial class TeacherWithTitle
+    partial class List
     {
         /// <summary>
         /// Required designer variable.
@@ -29,33 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idTeacherLabel;
             this.dataSet1 = new Database.DataSet1();
             this.teacherWithTitleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teacherWithTitleTableAdapter = new Database.DataSet1TableAdapters.TeacherWithTitleTableAdapter();
             this.tableAdapterManager = new Database.DataSet1TableAdapters.TableAdapterManager();
             this.teacherTableAdapter = new Database.DataSet1TableAdapters.TeacherTableAdapter();
             this.teacherWithTitleDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            idTeacherLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherWithTitleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherWithTitleDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // idTeacherLabel
-            // 
-            idTeacherLabel.AutoSize = true;
-            idTeacherLabel.Location = new System.Drawing.Point(326, 9);
-            idTeacherLabel.Name = "idTeacherLabel";
-            idTeacherLabel.Size = new System.Drawing.Size(61, 13);
-            idTeacherLabel.TabIndex = 3;
-            idTeacherLabel.Text = "Id Учителя";
             // 
             // dataSet1
             // 
@@ -92,23 +79,32 @@
             // teacherWithTitleDataGridView
             // 
             this.teacherWithTitleDataGridView.AutoGenerateColumns = false;
-            this.teacherWithTitleDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.teacherWithTitleDataGridView.BackgroundColor = System.Drawing.Color.Lavender;
             this.teacherWithTitleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.teacherWithTitleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.teacherWithTitleDataGridView.DataSource = this.teacherWithTitleBindingSource;
-            this.teacherWithTitleDataGridView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.teacherWithTitleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.teacherWithTitleDataGridView.Location = new System.Drawing.Point(0, 0);
             this.teacherWithTitleDataGridView.Name = "teacherWithTitleDataGridView";
-            this.teacherWithTitleDataGridView.Size = new System.Drawing.Size(300, 450);
+            this.teacherWithTitleDataGridView.Size = new System.Drawing.Size(377, 393);
             this.teacherWithTitleDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdTeacherTitle";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id Главного руководителя";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "IdTeacher";
             this.dataGridViewTextBoxColumn2.DataSource = this.teacherBindingSource;
             this.dataGridViewTextBoxColumn2.DisplayMember = "LName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Учитель";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Главный руководитель";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -119,62 +115,20 @@
             this.teacherBindingSource.DataMember = "Teacher";
             this.teacherBindingSource.DataSource = this.dataSet1;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(329, 113);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(233, 63);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Сохранить";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(329, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 65);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.teacherWithTitleBindingSource, "IdTeacher", true));
-            this.comboBox1.DataSource = this.teacherBindingSource;
-            this.comboBox1.DisplayMember = "LName";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(393, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(114, 21);
-            this.comboBox1.TabIndex = 23;
-            this.comboBox1.ValueMember = "IdTeacher";
-            // 
-            // TeacherWithTitle
+            // List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(idTeacherLabel);
+            this.ClientSize = new System.Drawing.Size(377, 393);
             this.Controls.Add(this.teacherWithTitleDataGridView);
-            this.Name = "TeacherWithTitle";
-            this.Text = "Учителя с должностью(выше ассистент)";
-            this.Load += new System.EventHandler(this.TeacherWithTitle_Load);
+            this.Name = "List";
+            this.Text = "List";
+            this.Load += new System.EventHandler(this.List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherWithTitleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherWithTitleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -187,9 +141,7 @@
         private System.Windows.Forms.DataGridView teacherWithTitleDataGridView;
         private DataSet1TableAdapters.TeacherTableAdapter teacherTableAdapter;
         private System.Windows.Forms.BindingSource teacherBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -35,17 +35,17 @@
             this.teacherDisciplineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teacherDisciplineTableAdapter = new Database.DataSet1TableAdapters.TeacherDisciplineTableAdapter();
             this.tableAdapterManager = new Database.DataSet1TableAdapters.TableAdapterManager();
+            this.disciplineTableAdapter = new Database.DataSet1TableAdapters.DisciplineTableAdapter();
+            this.teacherTableAdapter = new Database.DataSet1TableAdapters.TeacherTableAdapter();
             this.teacherDisciplineDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.disciplineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.teacherTableAdapter = new Database.DataSet1TableAdapters.TeacherTableAdapter();
-            this.disciplineBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.disciplineTableAdapter = new Database.DataSet1TableAdapters.DisciplineTableAdapter();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             idTeacherLabel = new System.Windows.Forms.Label();
             idDisciplineLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -54,6 +54,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.disciplineBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idTeacherLabel
+            // 
+            idTeacherLabel.AutoSize = true;
+            idTeacherLabel.Location = new System.Drawing.Point(354, 15);
+            idTeacherLabel.Name = "idTeacherLabel";
+            idTeacherLabel.Size = new System.Drawing.Size(49, 13);
+            idTeacherLabel.TabIndex = 3;
+            idTeacherLabel.Text = "Учитель";
+            // 
+            // idDisciplineLabel
+            // 
+            idDisciplineLabel.AutoSize = true;
+            idDisciplineLabel.Location = new System.Drawing.Point(354, 41);
+            idDisciplineLabel.Name = "idDisciplineLabel";
+            idDisciplineLabel.Size = new System.Drawing.Size(70, 13);
+            idDisciplineLabel.TabIndex = 5;
+            idDisciplineLabel.Text = "Дисциплина";
             // 
             // dataSet1
             // 
@@ -83,6 +101,14 @@
             this.tableAdapterManager.TeacherWithTitleTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Database.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // disciplineTableAdapter
+            // 
+            this.disciplineTableAdapter.ClearBeforeFill = true;
+            // 
+            // teacherTableAdapter
+            // 
+            this.teacherTableAdapter.ClearBeforeFill = true;
+            // 
             // teacherDisciplineDataGridView
             // 
             this.teacherDisciplineDataGridView.AutoGenerateColumns = false;
@@ -98,27 +124,41 @@
             this.teacherDisciplineDataGridView.Size = new System.Drawing.Size(345, 450);
             this.teacherDisciplineDataGridView.TabIndex = 1;
             // 
-            // idTeacherLabel
+            // dataGridViewTextBoxColumn2
             // 
-            idTeacherLabel.AutoSize = true;
-            idTeacherLabel.Location = new System.Drawing.Point(354, 15);
-            idTeacherLabel.Name = "idTeacherLabel";
-            idTeacherLabel.Size = new System.Drawing.Size(49, 13);
-            idTeacherLabel.TabIndex = 3;
-            idTeacherLabel.Text = "Учитель";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdTeacher";
+            this.dataGridViewTextBoxColumn2.DataSource = this.teacherBindingSource;
+            this.dataGridViewTextBoxColumn2.DisplayMember = "LName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Учителя";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn2.ValueMember = "IdTeacher";
             // 
-            // idDisciplineLabel
+            // teacherBindingSource
             // 
-            idDisciplineLabel.AutoSize = true;
-            idDisciplineLabel.Location = new System.Drawing.Point(354, 41);
-            idDisciplineLabel.Name = "idDisciplineLabel";
-            idDisciplineLabel.Size = new System.Drawing.Size(70, 13);
-            idDisciplineLabel.TabIndex = 5;
-            idDisciplineLabel.Text = "Дисциплина";
+            this.teacherBindingSource.DataMember = "Teacher";
+            this.teacherBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "IdDiscipline";
+            this.dataGridViewTextBoxColumn3.DataSource = this.disciplineBindingSource;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "NameDiscipline";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Дисциплина";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "IdDiscipline";
+            // 
+            // disciplineBindingSource
+            // 
+            this.disciplineBindingSource.DataMember = "Discipline";
+            this.disciplineBindingSource.DataSource = this.dataSet1;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(357, 149);
             this.button2.Name = "button2";
@@ -130,7 +170,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(357, 78);
             this.button1.Name = "button1";
@@ -164,46 +204,6 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 23;
             this.comboBox2.ValueMember = "IdDiscipline";
-            // 
-            // teacherBindingSource
-            // 
-            this.teacherBindingSource.DataMember = "Teacher";
-            this.teacherBindingSource.DataSource = this.dataSet1;
-            // 
-            // teacherTableAdapter
-            // 
-            this.teacherTableAdapter.ClearBeforeFill = true;
-            // 
-            // disciplineBindingSource
-            // 
-            this.disciplineBindingSource.DataMember = "Discipline";
-            this.disciplineBindingSource.DataSource = this.dataSet1;
-            // 
-            // disciplineTableAdapter
-            // 
-            this.disciplineTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdTeacher";
-            this.dataGridViewTextBoxColumn2.DataSource = this.teacherBindingSource;
-            this.dataGridViewTextBoxColumn2.DisplayMember = "LName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Учителя";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn2.ValueMember = "IdTeacher";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "IdDiscipline";
-            this.dataGridViewTextBoxColumn3.DataSource = this.disciplineBindingSource;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "NameDiscipline";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Дисциплина";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ValueMember = "IdDiscipline";
             // 
             // TeacherDiscipline
             // 
